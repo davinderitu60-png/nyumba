@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const categories = [
-    "Apartments",
-    "Houses",
-    "Villas",
-    "Commercial",
-    "Plots",
+  
   ];
 
   return (
