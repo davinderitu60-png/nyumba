@@ -1,6 +1,7 @@
 
 import React from "react";
 import { House, Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const categories = [
@@ -59,24 +60,28 @@ const Header = () => {
             </a>
           ))}
         </nav>
+{/* Action buttons */}
+      <div className="ml-auto flex shrink-0 items-center gap-2.5 lg:ml-0">
 
-        {/* Action buttons */}
-        <div className="ml-auto flex shrink-0 items-center gap-2 lg:ml-0">
-          <button
-            type="button"
-            className="hidden h-[42px] items-center justify-right rounded-[11px] border border-[#105638] px-5 text-[15px] font-medium text-[#105638] transition-colors hover:bg-[#f0f7f3] sm:flex"
-          >
-            Sign In
-          </button>
+        {/* Sign In */}
+        <Link
+          to="/signin"
+          className="hidden h-[49px] items-center justify-center rounded-[11px] border border-[#105638] px-5 text-[17px] font-medium text-[#105638] transition-colors hover:bg-[#f0f7f3] sm:flex"
+        >
+          Sign In
+        </Link>
 
-          <button
-            type="button"
-            className="h-[42px] whitespace-nowrap rounded-[11px] bg-[#105638] px-5 text-[16px] font-semibold text-white transition-colors hover:bg-[#0b422b] sm:px-6 sm:text-[17px]"
-          >
-            List Property
-          </button>
-        </div>
+        {/* List Property */}
+        <Link
+          to="/list-property"
+          className="flex h-[49px] items-center justify-center whitespace-nowrap rounded-[11px] bg-[#105638] px-5 text-[16px] font-semibold text-white transition-colors hover:bg-[#0b422b] sm:px-6 sm:text-[17px]"
+        >
+          List Property
+        </Link>
+
       </div>
+    </div>
+
 
       {/* Mobile search */}
       <div className="px-5 pb-3 lg:hidden">
